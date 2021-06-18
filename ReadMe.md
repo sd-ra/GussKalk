@@ -4,7 +4,7 @@
 
 In index.js stehen die Formeln und zu klärende Fragen.
 
-### Fragen und Antworten
+### Allgemeine Fragen und Antworten
 
 Was heißt AL in der Excel-Kalkulation?
 Antwort:

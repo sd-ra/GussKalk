@@ -1,29 +1,33 @@
 let Parameter = {
-    Schmelzverlust_Proz: 5.5    // Abbrand - warum nicht im Material?
+    Anteil_Angussgewicht_Prozent: 32    // 'Länder-DB'!M19
 }
 
-let material = {
-    costPerKg: 2        // Preis/kg
+let Material = {
+    PreisProKg: 2        // Preis/kg
 }
 
-let product = {
-    grossWeight: 5,
-    MaterialkostenRohteil() {    // Materialkosten Rohteil
-        return this.grossWeight * material.costPerKg
+let Teil = {
+    Rohteilgewicht: 5,
+    Materialkosten_Rohteil() {  
+        return this.Rohteilgewicht * Material.PreisProKg
     },
-    Schmelzverlust_Proz: 5.6,    // Abbrand - warum nochmal?
+    Schmelzverlust_Prozent_fest: 5.6,   // Abbrand
     Wandstaerke_max_mm: 15,
     Wandstaerke_min_mm: 8,
-    AufschlagTeileDicke_Proz() {
-        let result = 2.5 / 100 * (this.Wandstaerke_max_mm - 8) / 4
-        if (result < 0) {
-            result = 0
-        }
-        return result
+    Korrektur_Modellanzahl_Prozent: 2,  // F$47
+    Kastennutzung_Prozent: 1.3,         // F$58
+    Aufschlag_TeileDicke_Prozent() {    // F$44
+        return Math.max(0, 0.025 * (this.Wandstaerke_max_mm - 8) / 4)
     },
-    combustionCost() {
-        return this.MaterialkostenRohteil() * (1 + Parameter.Schmelzverlust_Proz / 100) * this.Schmelzverlust_Proz / 100
+    Aufschlag_Kastennutzung_Prozent() { // F$45
+        return Math.max(0, 0.2 * (40 - this.Kastennutzung_Prozent))
+    },
+    Anguss_Prozent() {                  // F$42
+        return Parameter.Anteil_Angussgewicht_Prozent + this.Aufschlag_TeileDicke_Prozent() + this.Aufschlag_Kastennutzung_Prozent() + this.Korrektur_Modellanzahl_Prozent
+    },
+    Schmelzverlust_Kosten() {
+        return this.Materialkosten_Rohteil() * (1 + this.Anguss_Prozent() / 100) * this.Schmelzverlust_Prozent_fest / 100
     }
 }
 
-alert(product.AufschlagTeileDicke_Proz());
+alert(Teil.Aufschlag_Kastennutzung_Prozent())
