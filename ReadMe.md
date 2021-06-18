@@ -2,8 +2,8 @@
 
 ### Fragen und Antworten
 
-Frage: Was heißt AL in der Excel-Kalkulation?
+Was heißt AL in der Excel-Kalkulation?
 Antwort:
 
-Frage: Wofür steht CE?
+Wofür steht CE?
 Antwort:
