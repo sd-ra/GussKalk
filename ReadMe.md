@@ -1,6 +1,6 @@
 ## Hier entsteht ein Kalkulations-Modul für die Gießerei- und Metall-Branche (Projekt-Nr. 269)
 
-### Aufbau
+### Beschreibung
 
 In index.js stehen die Formeln.
 
