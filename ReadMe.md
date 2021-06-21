@@ -2,7 +2,7 @@
 
 ### Aufbau
 
-In index.js stehen die Formeln und zu klärende Fragen.
+In index.js stehen die Formeln.
 
 ### Allgemeine Fragen und Antworten
 
