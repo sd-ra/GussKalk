@@ -7,7 +7,7 @@ In index.js stehen die Formeln.
 ### Allgemeine Fragen und Antworten
 
 Was heißt AL in der Excel-Kalkulation?
-Antwort:
+Antwort:Alu 
 
-Wofür steht CE?
-Antwort:
+Wofür steht CE? 
+Antwort:Corporate Engeenier
