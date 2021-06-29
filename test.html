@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Vue</title>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Kalkulation</h1>
+            <input type="text" :value="testData">{{testData}}</input>
+            <input type="text" :value="testData">{{testData}}</input>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    testData: "test"
+                },
+                methods: {
+                    humanizeURL: function (url) {
+                        return url
+                            .replace(/^https?:\/\//, "")
+                            .replace(/\/$/, "");
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

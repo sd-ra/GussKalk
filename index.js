@@ -30,13 +30,7 @@ let Teil = {
     }
 }
 
-var json = JSON.stringify(Teil, function(key, value) {
-  if (typeof value === "function") {
-    return "/Function(" + value.toString() + ")/"
-  }
-  return value
-})
-
+// Ausgabe
 let out = ''
 for (const [key, value] of Object.entries(Teil)) {
     if (value.toString().includes("()")) {
@@ -45,6 +39,5 @@ for (const [key, value] of Object.entries(Teil)) {
         out += `${key}: ${value}` + '<br>'
     }
 }
-// out = eval("Teil.Anguss_Prozent()")
 document.getElementById("data").innerHTML = out
 
