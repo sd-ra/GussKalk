@@ -1,13 +1,13 @@
 ## Hier entsteht ein Kalkulations-Modul für die Gießerei- und Metall-Branche (Projekt-Nr. 269)
 
-### Aufbau
+### Beschreibung
 
-In index.js stehen die Formeln und zu klärende Fragen.
+In index.js stehen die Formeln.
 
 ### Allgemeine Fragen und Antworten
 
 Was heißt AL in der Excel-Kalkulation?
-Antwort:
+Antwort:Alu 
 
-Wofür steht CE?
-Antwort:
+Wofür steht CE? 
+Antwort:Corporate Engeenier
