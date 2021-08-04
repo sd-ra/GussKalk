@@ -4,7 +4,7 @@ WAHR			WAHR	 								Parametrische Kalkulation AL - Sandguss										Version V3
 							FALSCH			FALSCH			FALSCH			WAHR			WAHR			WAHR		
 			Artikel (Nr.  /  Bezeichnung)				58.622	   		58.622	   		58.622	   		?	   		?	   		?		
 							Housing	   		Housing	  		Housing	  		?	  		?	  		?		
-			Produktionsregion				Deutschland	  		Türkei	   		Polen	   		Deutschland	   		Deutschland	   		Deutschland		
+			Produktionsregion				Deutschland	  		Türkei	   		Deutschland	   		Deutschland	   		Deutschland	   		Deutschland		
 			Datum				7.3.19	   		7.3.19	   		7.3.19	   		7.3.19	   		7.3.19	   		7.3.19		
 			Materialien				EN AC-46100	   		EN AC-43100	   		EN AC-43100	   		EN AC-43100	   		EN AC-43100	   		EN AC-43100		 
 							Al Si10Cu2(Fe)	  		Al Si10Mg(b)	  		Al Si10Mg(b)	  		Al Si10Mg(b)	  		Al Si10Mg(b)	  		Al Si10Mg(b)		
@@ -32,96 +32,97 @@ WAHR			WAHR	 								Parametrische Kalkulation AL - Sandguss										Version V3
 			Schmelzleistung (kg/h)				2000	Gas		2000	Gas		2000	Gas		#WERT!	Gas		#WERT!	Gas		#WERT!	Gas	 
 			Rohteilgewicht AL (kg) (incl. Anguß)				7,71	   		7,71	   		7,71	   		#WERT!	   		#WERT!	   		#WERT!		 
 			Zykluszeit Ofen (min)				117	   		117	   		117	   		#WERT!	   		#WERT!	   		#WERT!		 
-			Stundensatz Ofen (€/h)				8,80	   		15,82	   		23,97	   		#WERT!	   		#WERT!	   		#WERT!		 
-			Prozesskosten Ofen (€/Stk.)				0,05 €	   		0,08 €	   		0,12 €	   		#WERT!	   		#WERT!	   		#WERT!		
+			Stundensatz Ofen (€/h)				8,80	   		15,82	   		16,06	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Prozesskosten Ofen (€/Stk.)				0,05 €	   		0,08 €	   		0,08 €	   		#WERT!	   		#WERT!	   		#WERT!		
 			Energieverbrauch (kWh/kg)				0,687	   		0,687	   		0,687	   		#WERT!	   		#WERT!	   		#WERT!		
-			Energiekosten (€/kWh 				0,053	   		0,040	   		0,124	   		0,053	   		0,053	   		0,053		 
-			Energiekosten (€/Stk.)				0,28 €	   		0,21 €	   		0,66 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Energiekosten (€/kWh 				0,053	   		0,040	   		0,053	   		0,053	   		0,053	   		0,053		 
+			Energiekosten (€/Stk.)				0,28 €	   		0,21 €	   		0,28 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 			Bediener pro Ofen				0,7	   		0,7	   		0,7	   		0,7	   		0,7	   		0,7		 
-			Personalkosten Ofenbediener (€/h)				32,48	   		5,42	   		7,46	   		29,42	   		29,42	   		29,42		
-			Personalkosten (€/Stk.)				0,12 €	   		0,02 €	   		0,03 €	   		#WERT!	   		#WERT!	   		#WERT!		
+			Personalkosten Ofenbediener (€/h)				32,48	   		5,42	   		32,48	   		29,42	   		29,42	   		29,42		
+			Personalkosten (€/Stk.)				0,12 €	   		0,02 €	   		0,12 €	   		#WERT!	   		#WERT!	   		#WERT!		
 			Schmelze entgasen/reinigen (min)				14,8	   		25,4	   		25,4	   		23,2	   		23,2	   		23,2		 
-			Reinigungskosten (€/h)				14,50	   		9,08	   		9,49	   		13,88	   		13,88	   		13,88		
-			Schmelzebehandlung (€/Stk.)				0,01 €	   		0,01 €	   		0,01 €	   		#WERT!	   		#WERT!	   		#WERT!		
+			Reinigungskosten (€/h)				14,50	   		9,08	   		14,50	   		13,88	   		13,88	   		13,88		
+			Schmelzebehandlung (€/Stk.)				0,01 €	   		0,01 €	   		0,02 €	   		#WERT!	   		#WERT!	   		#WERT!		
 	Makro		Mehraufwand durch Ausschuß				2,0%			2,0%			2,0%			0,0%			0,0%			0,0%		 
-			Schmelzkosten pro Stück				0,47 €	   		0,33 €	   		0,84 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Schmelzkosten pro Stück				0,47 €	   		0,33 €	   		0,52 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 			Prozess Formen				halbautomatisch / Bauteilkomplexität mäßig	   		Handformen / Bauteilkomplexität mäßig	   		Handformen / Bauteilkomplexität mäßig	   		automatisch / Bauteilkomplexität mäßig	   		automatisch / Bauteilkomplexität mäßig	   		automatisch / Bauteilkomplexität mäßig		 
 			Modelle / Platte berechnet			9	3	   		1	   		1	   		1	   		1	   		1		 
 	Makro		Modelle/Platte				1			1			1			1			1			1		 
 			Vorgeschlagene Maschine			9	9	   		12	   		12	   		#WERT!	   		#WERT!	   		#WERT!	8	 
 	Makro		Maschine gewählt				9			3			3			1			1			1		 
 			Kastengröße				130x130x80 cm	   		80x60x60 cm	   		80x60x60 cm	   		60x48x36 cm	   		60x48x36 cm	   		60x48x36 cm		 
-			Maschinenstundensatz				112,11 €	   		441,77 €	   		664,11 €	   		545,44 €	   		545,44 €	   		545,44 €		 
+			Maschinenstundensatz				112,11 €	   		441,77 €	   		495,55 €	   		545,44 €	   		545,44 €	   		545,44 €		 
 			Bediener pro Maschine				4,0	   		3,0	   		3,0	   		6,0	   		6,0	   		6,0		 
-			Personalkosten Maschinenbediener (€/h)				32,48 €	   		5,42 €	   		7,46 €	   		29,42 €	   		29,42 €	   		29,42 €		 
-			Prozesskosten pro Stunde				242,02 €	   		458,03 €	   		686,48 €	   		721,96 €	   		721,96 €	   		721,96 €		 
+			Personalkosten Maschinenbediener (€/h)				32,48 €	   		5,42 €	   		32,48 €	   		29,42 €	   		29,42 €	   		29,42 €		 
+			Prozesskosten pro Stunde				242,02 €	   		458,03 €	   		592,98 €	   		721,96 €	   		721,96 €	   		721,96 €		 
 			Anteil Kühleisen Volumen			0,00	ohne			ohne			ohne			ohne			ohne			ohne		
 			Zykluszeit in Sec				450	ohne		40	ohne		40	ohne		11	ohne		11	ohne		11	ohne	 
-			Formkosten pro Bauteil			1	30,25 €	   	1	5,09 €	   	1	7,63 €	   	1	2,21 €	   	1	2,21 €	   	1	2,21 €		 
+			Formkosten pro Bauteil			1	30,25 €	   	1	5,09 €	   	1	6,59 €	   	1	2,21 €	   	1	2,21 €	   	1	2,21 €		 
 	Makro		Fertigungslosgröße				100			100			100			0			0			0		 
 			Rüstzeit Werkzeug / Maschine (min)				50			50			50			45			45			45		 
 			zusätzl. Einrichter pro Maschine 				0	   		0	   		0	   		1	   		1	   		1		 
-			Personalkosten Einrichter				37,02 €	   		5,88 €	   		10,01 €	   		33,54 €	   		33,54 €	   		33,54 €		 
-			Rüstkosten pro Vorgang				201,68 €	   		384,80 €	   		576,72 €	   		566,62 €	   		566,62 €	   		566,62 €		 
-			Rüstkosten pro Bauteil				2,02 €	   		3,85 €	   		5,77 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
+			Personalkosten Einrichter				37,02 €	   		5,88 €	   		37,02 €	   		33,54 €	   		33,54 €	   		33,54 €		 
+			Rüstkosten pro Vorgang				201,68 €	   		384,80 €	   		498,17 €	   		566,62 €	   		566,62 €	   		566,62 €		 
+			Rüstkosten pro Bauteil				2,02 €	   		3,85 €	   		4,98 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
 			Kernvolumen (ltr)				0,0			0,0			0,0			0,0			0,0			0,0	0,00	 
 			Sandkerne (€/ltr)			0,00	0,00 €	0,00	0,00	0,00 €	0,00	0,00	0,00 €	0,00	0,00	0,00 €	0,00	0,00	0,00 €	0,00	0,00	0,00 €	0,00	 
 			Kernkosten pro Bauteil				0,00 €			0,00 €			0,00 €			0,00 €			0,00 €			0,00 €		
 	Makro		Fertigungsausschuss Formen				0,0%			0,0%			0,0%			0,0%			0,0%			0,0%		 
 			Fertigungsausschuss Formen (€/Stk.)				0,00 €	   		0,00 €	   		0,00 €	   		0,00 €	   		0,00 €	   		0,00 €		 
-			Formkosten gesamt pro Stück				32,27 €	   		8,94 €	   		13,39 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
+			Formkosten gesamt pro Stück				32,27 €	   		8,94 €	   		11,57 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
 			Nachbehandlung				Sandstrahlen	   		Sandstrahlen	   		Sandstrahlen	   		Sandstrahlen	   		Sandstrahlen	   		Sandstrahlen		 
 			Auspacken/Entkernen (min/Stk.)				0,0			0,0			0,0			0,0			0,0			0,0		
 			Anschnitt trennen (min/Stk.)				60,0			5,0			5,0			0,0			0,0			0,0		
-			Personalkosten Hilfsarbeiter (€/h)				27,40 €	   		4,12 €	   		5,48 €	   		24,82 €	   		24,82 €	   		24,82 €		 
-			Auspacken und Trennen (€/Stk.)				27,40 €	   		0,34 €	   		0,46 €	   		0,00 €	   		0,00 €	   		0,00 €		
+			Personalkosten Hilfsarbeiter (€/h)				27,40 €	   		4,12 €	   		27,40 €	   		24,82 €	   		24,82 €	   		24,82 €		 
+			Auspacken und Trennen (€/Stk.)				27,40 €	   		0,34 €	   		2,28 €	   		0,00 €	   		0,00 €	   		0,00 €		
 			Prozesszeit Strahlen (sec)				26	   		26	   		26	   		21	   		21	   		21		
 			Prozesskosten Gleitschleifen (€/t)				0,00	   		0,00	   		0,00	   		0,00	   		0,00	   		0,00		
 			Prozesszeit Feinputzen (sec)				0	   		0	   		0	   		0	   		0	   		0		
-			Oberflächenkosten (€/Stk.)				0,20 €	   		0,03 €	   		0,04 €	   		#WERT!	   		#WERT!	   		#WERT!		
-			Sandaufbereitung (€/t)				1,15 €	   		1,23 €	   		1,25 €	   		1,41 €	   		1,41 €	   		1,41 €		
-			Sandaufbereitung (€/Stk.)				0,71 €	   		0,21 €	   		0,22 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Oberflächenkosten (€/Stk.)				0,20 €	   		0,03 €	   		0,20 €	   		#WERT!	   		#WERT!	   		#WERT!		
+			Sandaufbereitung (€/t)				1,15 €	   		1,23 €	   		1,15 €	   		1,41 €	   		1,41 €	   		1,41 €		
+			Sandaufbereitung (€/Stk.)				0,71 €	   		0,21 €	   		0,20 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 			Wärmebehandlung (€/kg)				0,00 €			0,00 €			0,00 €			0,00 €			0,00 €			0,00 €		
 			Wärmebehandlung (€/Stk.)				0,00 €			0,00 €			0,00 €			#WERT!			#WERT!			#WERT!		
 	Makro		Fertigungsausschuss 2				2,0%			2,0%			2,0%			0,0%			0,0%			0,0%		 
-			Prozesskosten pro Stück				28,88 €	   		0,60 €	   		0,73 €	   		#WERT!	   		#WERT!	   		#WERT!		 
-			Prüfen				US prüfen	   		US prüfen	   		ohne Prfg.	   		ohne Prfg.	   		ohne Prfg.	   		ohne Prfg.		 
+			Prozesskosten pro Stück				28,88 €	   		0,60 €	   		2,74 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Prüfen				US prüfen	   		US prüfen	   		US prüfen	   		ohne Prfg.	   		ohne Prfg.	   		ohne Prfg.		 
 	Makro		VT Prüfzeit/Teil (sec)				400			300			300			0			0			0		 
-			Personalkosten Prüfer				37,02 €	   		5,88 €	   		10,01 €	   		33,54 €	   		33,54 €	   		33,54 €		 
-			Ultraschall Prüfung				0,27 €			0,20 €			0,00 €			0,00 €			0,00 €			0,00 €		
+			Personalkosten Prüfer				37,02 €	   		5,88 €	   		37,02 €	   		33,54 €	   		33,54 €	   		33,54 €		 
+			Ultraschall Prüfzeit/Teil (sec)				400			400			400											
+			Ultraschall Prüfung				0,27 €			0,26 €			0,27 €			0,00 €			0,00 €			0,00 €		
 			Farbeindring Prüfung				0,00 €			0,00 €			0,00 €			0,00 €			0,00 €			0,00 €		
 			Röntgen Prüfung				0,00 €			0,00 €			0,00 €			0,00 €			0,00 €			0,00 €		
 			Reparaturschweißen				ohne			ohne			ohne			ohne			ohne			ohne		
 			Reparaturanteil (%)				0,0%			0,0%			0,0%			0,0%			0,0%			0,0%		
 			Anteil Nachprüfung				50%			50%			50%			50%			50%			50%		
 			Kosten je Reparatur (€)				0,00 €			0,00 €			0,00 €			0,00 €			0,00 €			0,00 €		
-			Prüfkosten pro Stück				4,39 €	   		0,69 €	   		0,83 €	   		0,00 €	   		0,00 €	   		0,00 €		 
+			Prüfkosten pro Stück				4,39 €	   		0,75 €	   		3,36 €	   		0,00 €	   		0,00 €	   		0,00 €		 
 			Fertigungsnebenkosten					   			   			   			   			   				 
-							66,00 €	   		10,55 €	   		15,79 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+							66,00 €	   		10,62 €	   		18,18 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 			Materialprüfzertifikat (per lot)				0,00 €	   		0,00 €	   		0,00 €	   		0,00 €	   		0,00 €	   		0,00 €		
 	Makro		Fertigungsgemeinkosten				10,0%			10,0%			10,0%			0,0%			0,0%			0,0%		 
-			Fertigungsgemeinkosten				6,60 €	   		1,06 €	   		1,58 €	   		#WERT!	   		#WERT!	   		#WERT!		 
-			Fertigungskosten gesamt				72,60 €	   		11,61 €	   		17,37 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Fertigungsgemeinkosten				6,60 €	   		1,06 €	   		1,82 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Fertigungskosten gesamt				72,60 €	   		11,68 €	   		20,00 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 								   			   			   			   			   				 
 			Gemeinkosten & Gewinn					   			   			   			   			   				 
-							88,39 €	   		24,28 €	   		30,04 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+							88,39 €	   		24,35 €	   		32,67 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 	Makro		Vertriebs- und Verw.-gemeinkostensatz				12,0%			12,0%			12,0%			12,0%			12,0%			12,0%		 
-			Vertriebs- und Verw.-gemeinkosten				10,61 €	   		2,91 €	   		3,61 €	   		#WERT!	   		#WERT!	   		#WERT!		 
-			F&E- Kosten (8%)				5,81 €	   		0,93 €	   		1,39 €	   		#WERT!	   		#WERT!	   		#WERT!		 
-			Gesamtgemeinkosten				16,42 €	   		3,84 €	   		4,99 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Vertriebs- und Verw.-gemeinkosten				10,61 €	   		2,92 €	   		3,92 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			F&E- Kosten (8%)				5,81 €	   		0,93 €	   		1,60 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Gesamtgemeinkosten				16,42 €	   		3,86 €	   		5,52 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 	Makro		Gewinn auf Material				0,0%			0,0%			0,0%			0,0%			0,0%			0,0%		 
 	Makro		Gewinn auf Wertschöpfung				0,0%			0,0%			0,0%			0,0%			0,0%			0,0%		 
 			Gesamtgewinn				0,00 €	   		0,00 €	   		0,00 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 								   			   			   			   			   				 
-			Bauteilpreis gesamt				104,81 €	   		28,12 €	   		35,04 €	   		#WERT!	   		#WERT!	   		#WERT!		 
+			Bauteilpreis gesamt				104,81 €	   		28,21 €	   		38,19 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 								   			   			   			   			   				 
 			Potenziabschätzung				#BEZUG!	   		#BEZUG!	   		#BEZUG!	   		#WERT!	   		#WERT!	   		#WERT!		 
 								   			   			   			   			   				 
 	Makro		Zielpreis Bauteil				55,00 €	   		55,00 €	   		55,00 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
-			Potenzial pro Bauteil				-49,81 €	   		26,88 €	   		19,96 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
-			Potenzial über Lebenszyklus				0 €	   		806.334 €	   		598.843 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
+			Potenzial pro Bauteil				-49,81 €	   		26,79 €	   		16,81 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
+			Potenzial über Lebenszyklus				0 €	   		803.759 €	   		504.216 €	   		#DIV/0!	   		#DIV/0!	   		#DIV/0!		 
 			Anzahl notwendiger Gieß-WKZ				2 x Alu	   		2 x Alu	   		2 x Alu	   		#WERT!	   		#WERT!	   		#WERT!		
-			Werkzeuginvest geschätzt				10.100 €	   		8.500 €	   		8.800 €	   		#WERT!	   		#WERT!	   		#WERT!		
+			Werkzeuginvest geschätzt				10.100 €	   		8.500 €	   		10.100 €	   		#WERT!	   		#WERT!	   		#WERT!		
 			Kernkasteninvest geschätzt				0 €	   		0 €	   		0 €	   		0 €	   		0 €	   		0 €		
 			Modellkosten Angebot				10.000 €	   		5.600 €	   		7.500 €	   		#WERT!	   		#WERT!	   		#WERT!		 
 																								 
