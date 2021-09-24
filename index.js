@@ -36,6 +36,7 @@ let Parameter = {
         {
             Name: "Deutschland",
             Flaechenkosten_pro_m2_Monat: 6.5, // Flächenkosten
+            Lohn_Einrichter_Eur_Std: 25.59,
         },
     ],
     Schichtmodelle: [
@@ -124,6 +125,10 @@ let Teil = {
         this.Maschine.KostenProJahr / this.Nettonutzungsdauer_Std_pro_Jahr +
             this.Energieverbrauch_kW +
             this.Flaechenkosten_pro_Std; // Parametrikber!F$137: F$142/F$149+F$152+F$155
+    },
+    Personalkosten_Einrichter_Eur_Std() {
+        // Prüfer (F90=Parametrikber!F$22: )
+        //this.Produktionsland.Lohn_Einrichter_Eur_Std //=SVERWEIS(F$19;DB_Länder;5;FALSCH)*(1+WENN('Quick Input'!M$46=Auswahlfelder!$D$7;0;WENN('Quick Input'!M$46=Auswahlfelder!$D$8;0,5*SVERWEIS(F$19;DB_Länder;14;FALSCH);(SVERWEIS(F$19;DB_Länder;14;FALSCH)+SVERWEIS(F$19;DB_Länder;15;FALSCH))
     },
     //}
 };
