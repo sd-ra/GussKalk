@@ -1,0 +1,141 @@
+<script>
+let Stammdaten = {
+	Abschreibung_Jahre: 10,
+	Wartungs_Proz: 10,
+	Wochenarbeitstage: 5, 	//F144
+	Arbeitswochen_Jahr: 48	//F145
+}
+
+let	Schichtmodelle = [
+	{
+		Name: "1-Schcht",
+		Schicht_Anz: 1,
+		Std_Tag: 8, //F143
+		Korrektur_Proz: 95
+	}, {
+		Name: "2-Schcht",
+		Schicht_Anz: 2,
+		Std_Tag: 16,
+		Korrektur_Proz: 92
+	}, {
+		Name: "3-Schcht",
+		Schicht_Anz: 3,
+		Std_Tag: 24,
+		Korrektur_Proz: 88
+	}
+]
+
+let Laender = [
+	{
+		Name: "Deutschland",
+		LohnMaschFuehrer: 22.45,
+		FGK_Aufschlag_Proz: 0,
+		Schichtmodelle: [
+			{
+				...Schichtmodelle[0],
+				Zuschlag_Proz: 0
+			}, {
+				...Schichtmodelle[1],
+				Zuschlag_Proz: 62.1
+			}
+		]
+	}
+]
+
+
+let Firmengroessen = [
+	{
+		Name: "klein",
+		MaschNutzungKorr_Proz: -9 // F28
+	}, {
+		Name: "mittel",
+		MaschNutzungKorr_Proz: 0
+	}, {
+		Name: "groß",
+		MaschNutzungKorr_Proz: 5
+	},
+]
+
+let Maschinen = [
+	{
+		Name: "H 2,5",
+		Taktzeit_sec: 70,
+		Investition: 391000
+	}
+]
+
+let Kerntypen = [
+	{
+		Name: "Cold Box",
+		Zusatzzeit_min_Schuss: 0
+	}, {
+		Name: "Hot Box",
+		Zusatzzeit_min_Schuss: 0.5
+	}
+]
+
+let Bauteil = {
+	Land: Laender[0],
+	Schichtmodell: Laender[0].Schichtmodelle[1], // 2-Schicht
+	Firmengroesse: Firmengroessen[0], // klein 
+	Maschine: Maschinen[0],
+	FertigungsLos: 100, // F$94
+	Kerntyp: Kerntypen[1],
+	Kernvolumen: 21, // H$67
+	get MaschBediener_Eur_Std() {
+		/*
+			F21=SVERWEIS(F$19;DB_Länder;4;FALSCH)
+			*(1+WENN('Quick Input'!M$46=Auswahlfelder!$D$7;
+				0
+			;
+				WENN('Quick Input'!M$46=Auswahlfelder!$D$8;
+					0,5*SVERWEIS(F$19;DB_Länder;'Länder-DB'!A114;FALSCH)
+				;
+					(SVERWEIS(F$19;DB_Länder;14;FALSCH)+SVERWEIS(F$19;DB_Länder;15;FALSCH))/3)
+				)
+			)
+		*/
+		return this.Land.LohnMaschFuehrer * (1 + this.Schichtmodell.Zuschlag_Proz / 100 / this.Schichtmodell.Schicht_Anz)
+	},
+	get Prozesszeit_min_Schuss() {
+		return this.Maschine.Taktzeit_sec / 60 + this.Kerntyp.Zusatzzeit_min_Schuss //F229=SVERWEIS(F228;'Maschinen-DB'!$C$46:$N$51;7;FALSCH)/60+WENN(F227=2;$D$229;WENN(F227=3;$D$230;WENN(F227=4;$D$231;0)))
+	},
+	Mitarbeiter_Masch: 1, //F232=MAX(1;ABRUNDEN(MIN(2;F228/2);0))
+	get BruttoNutzung_Std_Jahr() {
+		return this.Schichtmodell.Std_Tag * Stammdaten.Arbeitswochen_Jahr * Stammdaten.Wochenarbeitstage  //F146=F$143*F$144*F$145
+	},
+	MittlereMaschNutzung_Proz: 80,
+	get Effizienz_MaschNutzung_Proz() {
+        // $27: =MIN(100%;('Quick Input'!M$50+F$28+F$29)*F$30)
+        return (this.MittlereMaschNutzung_Proz
+            + this.Firmengroesse.MaschNutzungKorr_Proz 
+			+ this.Land.FGK_Aufschlag_Proz //this.Korrektur_OrtRegion) *
+		) * this.Schichtmodell.Korrektur_Proz / 100
+    },
+	get Nutzungsgrad_Proz() {
+		return 0.9 * this.Effizienz_MaschNutzung_Proz //F148=0,9*F$27
+	},
+	get NettoNutzung_Std_Jahr() {
+		return this.BruttoNutzung_Std_Jahr * this.Nutzungsgrad_Proz / 100 //F149=F$146*F$148
+	},
+	get MaschKosten_Eur_Std() {
+		/*
+			F230=(SVERWEIS(F228;'Maschinen-DB'!$C$46:$N$51;12;FALSCH)/'Länder-DB'!$I$27
+			+SVERWEIS(F228;'Maschinen-DB'!$C$46:$N$51;12;FALSCH)*'Länder-DB'!$I$29)/F149
+		*/
+		return (this.Maschine.Investition / Stammdaten.Abschreibung_Jahre + this.Maschine.Investition * Stammdaten.Wartungs_Proz / 100) / this.NettoNutzung_Std_Jahr
+	},
+	get Prozesskosten_Std() {
+		return this.MaschKosten_Eur_Std + this.Mitarbeiter_Masch * this.MaschBediener_Eur_Std //F231=F230+F232*F21
+	},
+	get ProzesskostenKernschiessen_kg() {
+		return Prozesszeit_min_Schuss / 60 * Prozesskosten_Std * 2 //F$225=WENNFEHLER((F229/60*F231*2)/Refkalkulation!H$67;0)
+	},
+	//F$118=WENN('Quick Input'!M$23=Auswahlfelder!$D50;F$225;('Länder-DB'!$M$47+F120)/F$121)
+	get FertigungsLosKorr_Faktor() {
+		Math.max(1, Math.sqrt(14 / this.FertigungsLos + 0.6)) // F$119=MAX(1;WURZEL(14/F$94+0,6))
+	} 
+}
+
+alert (Bauteil.Prozesskosten)
+</script>
